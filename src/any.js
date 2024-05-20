@@ -20,9 +20,9 @@ function any(arr) {
     var rejectionReasons = [];
     for (var i = 0; i < args.length; i++) {
       try {
+        // prettier-ignore
         P.resolve(args[i])
-          .then(resolve)
-          .catch(function(error) {
+          .then(resolve)['catch'](function(error) {
             rejectionReasons.push(error);
             if (rejectionReasons.length === args.length) {
               reject(

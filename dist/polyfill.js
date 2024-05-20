@@ -98,7 +98,7 @@ function any(arr) {
       try {
         P.resolve(args[i])
           .then(resolve)
-          .catch(function(error) {
+          ['catch'](function(error) {
             rejectionReasons.push(error);
             if (rejectionReasons.length === args.length) {
               reject(
